@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Michaels_Stuff.Models.Publication>
+
+@{
+    ViewBag.Title = "Releases";
+}
+
+<h2>Releases</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Artist.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaRelease.MediaTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReleased)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artist.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaRelease.MediaTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReleased)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PublicationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PublicationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PublicationId })
+        </td>
+    </tr>
+}
+
+</table>

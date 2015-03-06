@@ -1,0 +1,26 @@
+﻿@model Michaels_Stuff.Models.MediaRelease
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MediaRelease</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MediaTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediaTitle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MediaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,34 @@
+﻿@model Michaels_Stuff.Models.Kendallsoft
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kendallsoft</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Companyid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

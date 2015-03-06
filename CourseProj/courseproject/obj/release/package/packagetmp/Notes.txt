@@ -1,0 +1,54 @@
+﻿Add Jquery UI
+Use Manage Nuget Packages 
+Search for JqueryUI Combined Library
+Install and add reference to Layout
+siteSlogan is used on front page
+<h1>@ConfigurationManager.AppSettings["siteSlogan"]</h1>
+
+Web API
+Spikergo_****
+Add new scaffolded item for WEBAPI
+
+Use [JsonIgnore] on Model so as to be able to Serialize
+add this class
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+
+
+namespace Michaels_Stuff.App_Start
+{
+    public class WebApiConfig
+    {
+        public static void Register(HttpConfiguration config)
+        {
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+            var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+        }
+
+
+    }
+}
+
+Add this to Global asax
+
+  //MKExplained
+ //Needs to be called early if you want to use the Web API
+
+  WebApiConfig.Register(GlobalConfiguration.Configuration);
+
+
+
+
+
+
+
+
+
+

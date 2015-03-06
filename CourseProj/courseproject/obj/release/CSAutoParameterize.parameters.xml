@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=lz1iafgrhg.database.windows.net;Initial catalog=classdb;User ID=kendallsoft;Password=Spikergo_1286;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kendallsoft\\Desktop\\Michaels\ Stuff\\Michaels\ Stuff\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Michaels_StuffContext-Web.config Connection String" description="Michaels_StuffContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=lz1iafgrhg.database.windows.net;Initial catalog=classdb;User ID=kendallsoft;Password=Spikergo_1286;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kendallsoft\\Desktop\\Michaels\ Stuff\\Michaels\ Stuff\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Michaels_StuffContext']/@connectionString" />
+  </parameter>
+  <parameter name="KendallsoftEntity-Web.config Connection String" description="KendallsoftEntity Connection String used in web.config by the application to access the database." defaultValue="Data Source=lz1iafgrhg.database.windows.net;Initial catalog=classdb;User ID=kendallsoft;Password=Spikergo_1286;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kendallsoft\\Desktop\\Michaels\ Stuff\\Michaels\ Stuff\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='KendallsoftEntity']/@connectionString" />
+  </parameter>
+</parameters>

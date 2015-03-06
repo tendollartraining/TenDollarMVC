@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Michaels_Stuff.Models.Publication>
+
+@foreach (var pub in Model)
+{
+    <div>
+
+        @Html.ActionLink(pub.MediaRelease.MediaTitle, "Edit", new { id = pub.MediaRelease.MediaId })
+
+    </div>
+}
