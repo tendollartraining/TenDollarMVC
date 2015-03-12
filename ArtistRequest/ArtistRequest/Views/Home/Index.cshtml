@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <title>Index</title>
+    <style>        
+        .btn a { color: white; text-decoration: none; }
+        body { background-color: #F1F1F1; }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h2>We have many Artists that you can book for your event!</h2>
+        <h3>Want more information?</h3>
+        <div class="btn btn-success">
+            @Html.ActionLink("Show Me More", "ArtistForm")
+        </div>
+    </div>
+</body>
+</html>

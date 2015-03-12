@@ -1,0 +1,47 @@
+﻿@model ArtistsRequest.Models.ClientResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <style>
+        body { background-color: #F1F1F1; }
+    </style>
+</head>
+<body>
+    @{
+        try {
+            WebMail.SmtpServer = "smtp.example.com";
+            WebMail.SmtpPort = 587;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "mySmtpUsername";
+            WebMail.Password = "mySmtpPassword";
+            WebMail.From = "rsvps@example.com";
+
+            WebMail.Send("party-host@example.com", "Artist Booking",
+                Model.Name + " is looking for an " + Model.Genre + " Artist");
+
+        } catch (Exception) {
+            @:<b>Sorry - we couldn't send the email to confirm your Artist Booking</b>
+        }
+    }
+    <div class="text-center">
+        <h1>Thank you, @Model.Name!</h1>
+        <div class="lead">
+            @if (Model.Genre == "Rock") {
+                @:It's great that you want to select one of our Artists. The @Model.Genre show will be great!
+            } else {
+                @:It's great that you want to select one of our Artists. The @Model.Genre show will be great!
+            }
+        </div>
+    </div>
+</body>
+</html>
